@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Test Suite">
+
+    <test name="SauceDemo Tests">
+
+        <classes>
+
+            <!-- Login Test -->
+            <class name="TestCase.LoginPage_TestCase"/>
+
+            <!-- Product Test -->
+            <class name="TestCase.ProductPage_TestCase"/>
+
+            <!-- Cart Test -->
+            <class name="TestCase.CartPage_TestCase"/>
+
+            <!-- Back to Products Test -->
+            <class name="TestCase.Backtoproducts_TestCase"/>
+
+            <!-- Remove Product from Cart Test -->
+            <class name="TestCase.Remove_YourCart_TestCase"/>
+
+        </classes>
+
+    </test>
+
+</suite>

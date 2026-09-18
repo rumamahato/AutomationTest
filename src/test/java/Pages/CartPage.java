@@ -4,44 +4,45 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class CartPage {
-
     WebDriver driver;
-
-    // Locators
-    By cartTitle = By.className("title");
-    By qty = By.xpath("//div[@class='cart_quantity_label']");
-    By description = By.xpath("//div[@class='cart_desc_label']");
-    By continueShoppingButton = By.id("continue-shopping");
-    By checkoutButton = By.id("checkout");
 
     // Constructor
     public CartPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    // Methods
-
-    // Get "Your Cart" text
+    // Cart Title
+    By cartTitle = By.className("title");
     public String getCartTitle() {
         return driver.findElement(cartTitle).getText();
     }
 
-    // Get "QTY" text
+    // Cart Item
+    By cartItem = By.className("inventory_item_name");
+    public String getCartItemName() {
+        return driver.findElement(cartItem).getText();
+    }
+
+    // Quantity
+    By qty = By.cssSelector(".cart_quantity_label");
     public String getQtyText() {
         return driver.findElement(qty).getText();
     }
 
-    // Get "Description" text
+    // Description
+    By description = By.cssSelector(".cart_desc_label");
     public String getDescriptionText() {
         return driver.findElement(description).getText();
     }
 
-    // Click Continue Shopping
+    // Continue Shopping
+    By continueShoppingButton = By.cssSelector("#continue-shopping");
     public void clickContinueShopping() {
         driver.findElement(continueShoppingButton).click();
     }
 
-    // Click Checkout
+    // Checkout
+    By checkoutButton = By.cssSelector("#checkout");
     public void clickCheckout() {
         driver.findElement(checkoutButton).click();
     }

@@ -16,7 +16,7 @@ public class Basic {
 
         driver.manage().window().maximize();
 
-        driver.get("C:\\Users\\LENOVO\\Desktop\\QA\\testautomation");
+        driver.get("https://www.saucedemo.com/");
     }
 
     @AfterMethod
