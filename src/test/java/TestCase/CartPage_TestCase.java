@@ -38,37 +38,29 @@ public class CartPage_TestCase extends Basic {
         // Verify Cart Title
         Assert.assertEquals(
                 cartPage.getCartTitle(),
-                "Your Cart"
+                "Your Cart",
+                "Cart title is incorrect"
         );
 
         // Verify Product Name
         Assert.assertEquals(
                 cartPage.getCartItemName(),
-                "Sauce Labs Backpack"
+                "Sauce Labs Backpack",
+                "Product name is incorrect"
         );
 
         // Verify Quantity
         Assert.assertEquals(
                 cartPage.getQtyText(),
-                "QTY"
+                "QTY",
+                "Quantity label is incorrect"
         );
 
         // Verify Description
         Assert.assertEquals(
                 cartPage.getDescriptionText(),
-                "DESCRIPTION"
+                "DESCRIPTION",
+                "Description label is incorrect"
         );
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

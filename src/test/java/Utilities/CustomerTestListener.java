@@ -1,6 +1,5 @@
 package Utilities;
 
-import org.jspecify.annotations.NonNull;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -9,11 +8,12 @@ public class CustomerTestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
+
         ExtentReportManager.startReport();
     }
 
     @Override
-    public void onTestStart(@NonNull ITestResult result) {
+    public void onTestStart(ITestResult result) {
 
         ExtentReportManager.createTest(result.getName());
 
@@ -34,8 +34,10 @@ public class CustomerTestListener implements ITestListener {
         ExtentReportManager.getTest()
                 .fail("Test Failed");
 
-        ExtentReportManager.getTest()
-                .fail(result.getThrowable());
+        if (result.getThrowable() != null) {
+            ExtentReportManager.getTest()
+                    .fail(result.getThrowable());
+        }
     }
 
     @Override
@@ -47,6 +49,13 @@ public class CustomerTestListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
+
+        // Save report
         ExtentReportManager.endReport();
+
+        // Send current report by email
+        EmailUtils.sendTestReportEmail(
+                ExtentReportManager.getReportPath()
+        );
     }
 }
