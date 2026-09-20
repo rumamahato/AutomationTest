@@ -12,11 +12,23 @@
 
         <classes>
 
+            <!-- Login Test -->
             <class name="TestCase.LoginPage_TestCase"/>
+
+            <!-- Product Test -->
             <class name="TestCase.ProductPage_TestCase"/>
+
+            <!-- Cart Test -->
             <class name="TestCase.CartPage_TestCase"/>
+
+            <!-- Back to Products Test -->
             <class name="TestCase.Backtoproducts_TestCase"/>
+
+            <!-- Remove Product from Cart Test -->
             <class name="TestCase.Remove_YourCart_TestCase"/>
+
+            <!-- Checkout Test -->
+            <class name="TestCase.CheckOut_TestCase"/>
 
         </classes>
 
