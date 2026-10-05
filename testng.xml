@@ -5,7 +5,7 @@
 <suite name="Automation Test Suite">
 
     <listeners>
-        <listener class-name="Utilities.CustomerTestListener"/>
+        <listener class-name="Utilities.ExtentTestListener"/>
     </listeners>
 
     <test name="SauceDemo Tests">
